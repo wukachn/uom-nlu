@@ -5,7 +5,7 @@ language: en
 license: cc-by-4.0
 tags:
 - text-classification
-repo: https://github.com/username/project_name
+repo: https://github.com/wukachn/uom-nlu
 
 ---
 
@@ -17,18 +17,16 @@ This is a classification model that was trained to determine if a given hypothes
 ## Model Details
 
 ### Model Description
+- **Developed by:** Peter Hamer and Vinayak Singh Bhadoriya
+- **Language(s):** English
+- **Model type:** Supervised
+- **Model architecture:** Ensemble
 
 This model utilizes a traditional machine learning approach for a natural language inference (NLI) task, determining if a given hypothesis is true based on its premise.
 The final model uses an ensemble architecture to combine 3 sub-models which all use TF-IDF embeddings. These models each cast a vote to determine the final classification. The 3 sub-models which make up the final ensemble model are listed below:
 - A Logistic Regression Model
 - A Random Forest Model
 - A Gradient Boosting Model
-
-
-- **Developed by:** Peter Hamer and Vinayak Singh Bhadoriya
-- **Language(s):** English
-- **Model type:** Supervised
-- **Model architecture:** Ensemble
 
 <!-- (Model Resources) Provide links where applicable. Dont think i need this section-->
 
