@@ -108,7 +108,7 @@ Speeds, Sizes, Times
 
 <!-- This should describe any evaluation data used (e.g., the development/validation set provided). -->
 
-A subset of the development set provided, amounting to TODO K pairs.
+A development set consisting of 6K pairs was used to evaluate the model.
 
 #### Metrics
 
