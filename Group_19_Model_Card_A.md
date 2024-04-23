@@ -59,8 +59,8 @@ Speeds, Sizes, Times
 <!-- This section provides information about how roughly how long it takes to train the model and the size of the resulting model. -->
 
 
-      - overall training time: 0m 27s
-      - model size: 543 KB
+      - overall training time: 0m 29s
+      - model size: 544 KB
 
 #### The Random Forest Model
 Optimal Training Hyperparameters
@@ -70,8 +70,8 @@ Optimal Training Hyperparameters
 
       - max_depth: None
       - max_features: sqrt
-      - min_samples_leaf: 2
-      - min_samples_split: 10
+      - min_samples_leaf: 4
+      - min_samples_split: 5
       - n_estimators: 200
 
 Speeds, Sizes, Times
@@ -79,8 +79,8 @@ Speeds, Sizes, Times
 <!-- This section provides information about how roughly how long it takes to train the model and the size of the resulting model. -->
 
 
-      - overall training time: 43m 41s
-      - model size: 42.4 MB
+      - overall training time: 44m 26s
+      - model size: 17.4 MB
 
 
 #### The Gradient Boosting Model
@@ -99,7 +99,7 @@ Speeds, Sizes, Times
 <!-- This section provides information about how roughly how long it takes to train the model and the size of the resulting model. -->
 
 
-      - overall training time: 27m 0s
+      - overall training time: 26m 6s
       - model size: 749 KB
 
 #### The Final Ensemble Model
@@ -110,7 +110,7 @@ Speeds, Sizes, Times
 
 
       - overall fit time: 0m 46s
-      - model size: 38.4 MB
+      - model size: 37.5 MB
 
 ## Evaluation
 
