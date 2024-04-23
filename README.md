@@ -1,4 +1,4 @@
-# Group 19 - NLI
+# Natural Language Inference Shared Task (Group 19)
 
 ## Traditional ML Approach (A)
 
@@ -25,3 +25,11 @@ Then, loads test data from `data/<file-name>.csv`, generates predictions using t
 ### Demo Notebook
 This notebook simply loads the trained ensemble model (path: `models/ensemble_model.joblib`) and the TF-IDF vectorizer (path: `models/tfidf/tfidf_vectorizer.joblib`).
 Then, loads test data from `data/test>.csv`, generates predictions using the trained model and saves them to a CSV file.
+
+## Deep Learning (w/o Transformers) Approach (B)
+
+### Training Notebook
+
+### Evaluation Notebook
+
+### Demo Notebook
