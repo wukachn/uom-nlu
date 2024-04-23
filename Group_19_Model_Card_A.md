@@ -32,6 +32,9 @@ The final model uses an ensemble architecture to combine 3 sub-models which all 
 
 ## Training Details
 
+Each model's hyperparameters were optimized individually with a grid search, choosing the set which produced the highest accuracy.
+Then, each model was trained individually, using the same training data, before being fit as an ensemble model.
+
 ### Training Data
 
 <!-- This is a short stub of information on the training data that was used, and documentation related to data pre-processing or additional filtering (if applicable). -->
@@ -42,7 +45,7 @@ The final model uses an ensemble architecture to combine 3 sub-models which all 
 
 <!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
 #### The Logistic Regression Model
-Training Hyperparameters
+Optimal Training Hyperparameters
 
 <!-- This is a summary of the values of hyperparameters used in training the model. -->
 
@@ -56,11 +59,11 @@ Speeds, Sizes, Times
 <!-- This section provides information about how roughly how long it takes to train the model and the size of the resulting model. -->
 
 
-      - overall training time: TODO
+      - overall training time: 0m 27s
       - model size: 543 KB
 
 #### The Random Forest Model
-Training Hyperparameters
+Optimal Training Hyperparameters
 
 <!-- This is a summary of the values of hyperparameters used in training the model. -->
 
@@ -76,11 +79,12 @@ Speeds, Sizes, Times
 <!-- This section provides information about how roughly how long it takes to train the model and the size of the resulting model. -->
 
 
-      - overall training time: TODO
+      - overall training time: 43m 41s
       - model size: 42.4 MB
 
+
 #### The Gradient Boosting Model
-Training Hyperparameters
+Optimal Training Hyperparameters
 
 <!-- This is a summary of the values of hyperparameters used in training the model. -->
 
@@ -95,8 +99,18 @@ Speeds, Sizes, Times
 <!-- This section provides information about how roughly how long it takes to train the model and the size of the resulting model. -->
 
 
-      - overall training time: TODO
+      - overall training time: 27m 0s
       - model size: 749 KB
+
+#### The Final Ensemble Model
+
+Speeds, Sizes, Times
+
+<!-- This section provides information about how roughly how long it takes to train the model and the size of the resulting model. -->
+
+
+      - overall fit time: 0m 46s
+      - model size: 38.4 MB
 
 ## Evaluation
 
@@ -122,7 +136,7 @@ A development set consisting of 6K pairs was used to evaluate the model.
 
 ### Results
 
-The model obtained an F1-score of TODO % and an accuracy of TODO %.
+The model obtained an overall accuracy of 67%. The model performed at a higher standard for pairs which an entailment was present (1), achieving an F1-score of 0.71 compared to 0.62 for neutral/contradictory pairs (0).
 
 ## Technical Specifications
 
@@ -141,11 +155,3 @@ The model obtained an F1-score of TODO % and an accuracy of TODO %.
 
 
 <!-- (Bias, Risks, and Limitations) This section is meant to convey both technical and sociotechnical limitations. Dont think i have anything for this-->
-
-
-## Additional Information
-
-<!-- Any other information that would be useful for other people to know. -->
-
-Each model was optimized individually, finding the best set of hyperparameters using a grid search. Then, each model was combined into the final ensemble model.
-
