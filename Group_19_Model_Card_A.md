@@ -132,12 +132,12 @@ A development set consisting of 6K pairs was used to evaluate the model.
       - Precision
       - Recall
       - F1-score
-      - Accuracy
+      - Cross-Validation Accuracy
       - ROC Curve (AUC)
 
 ### Results
 
-The model obtained an overall accuracy of 67% and an AUC score of 0.67. The model performed at a higher standard for pairs which an entailment was present (1), achieving an F1-score of 0.71 compared to 0.62 for neutral/contradictory pairs (0).
+The model achieved a cross-validation accuracy of 64.78% and an AUC score of 0.67. The model performed at a higher standard for pairs which an entailment was present (1), achieving an F1-score of 0.71 compared to 0.62 for neutral/contradictory pairs (0).
 
 ## Technical Specifications
 
