@@ -1,5 +1,7 @@
 # Natural Language Inference Shared Task (Group 19)
 
+Predictions for the test data can be seen found in `predictions/`.
+
 ## Traditional ML Approach (A)
 
 Please ensure that the `(train|dev|test).csv` files are stored at `data/<file>`.
