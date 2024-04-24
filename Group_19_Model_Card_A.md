@@ -4,12 +4,12 @@
 language: en
 license: cc-by-4.0
 tags:
-- text-classification
+- natural-language-inference
 repo: https://github.com/wukachn/uom-nlu
 
 ---
 
-# Model Card for GROUP_19_NLI_A
+# Model Card for r87977ph-s63644vb-NLI: Approach A (GROUP 19)
 
 This is a classification model that was trained to determine if a given hypothesis is true based on its premise.
 
