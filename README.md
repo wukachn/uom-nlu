@@ -4,7 +4,7 @@ Predictions for the test data can be found in `predictions/`.
 
 ## Overview
 
-![image](https://github.com/wukachn/uom-nlu/assets/68754675/cc26e8bd-dc92-4ba4-9177-592f4cf98338)
+![image](https://github.com/wukachn/uom-nlu/assets/68754675/ac3ebbbf-86b5-4286-aeb6-e6fcc3394874)
 
 ## Traditional ML Approach (A)
 
