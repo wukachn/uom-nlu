@@ -1,6 +1,6 @@
 # Natural Language Inference Shared Task (Group 19)
 
-Predictions for the test data can be seen found in `predictions/`.
+Predictions for the test data can be found in `predictions/`.
 
 ## Traditional ML Approach (A)
 
