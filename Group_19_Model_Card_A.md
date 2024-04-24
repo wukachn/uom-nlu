@@ -146,6 +146,7 @@ The model obtained an overall accuracy of 67%. The model performed at a higher s
 
       - CPU: 11th Gen Intel(R) Core(TM) i7-11700K
       - GPU: NVIDIA GeForce RTX 3070 Ti
+      - RAM: 16GB
 
 ### Software
 
