@@ -37,6 +37,7 @@ The training notebook imports the necessary libraries and loads the glove embedd
 It then loads the training set and uses the glove embeddings to get a vector representation of the sentences.
 The model is then defined and compiled using the TensorFlow library, and finally trained on the given data set.
 The model is trained for 100 epochs and the final model is saved as `models/deep_learning/model.keras`.
+It can be found in this [link](https://drive.google.com/drive/folders/1_nZ7zuid0HlLF7CLwIF7lZl0WevTdWGA?usp=sharing).
 
 #### Architecture
 The model is based on the sentence embedding sum-of-words approach that Bowman et al. (2015) proposed in their paper, "A large annotated corpus for learning natural language inference". In this approach, the model takes in two sentences, and for each sentence, the words are embedded using GloVe embeddings. The embeddings are then summed to get a sentence embedding. The two sentence embeddings are concatenated and passed through a feedforward neural network to get the final output.
