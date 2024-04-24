@@ -4,17 +4,17 @@
 language: en
 license: cc-by-4.0
 tags:
-- text-classification
-repo: https://github.com/username/project_name
+- natural-language-inference
+repo: https://github.com/wukachn/uom-nlu
 
 ---
 
-# Model Card for username1-username2-track_abbreviation
+# Model Card for r87977ph-s63644vb-NLI
 
 <!-- Provide a quick summary of what the model is/does. -->
 
-This is a classification model that was trained to
-      detect whether two pieces of text were written by the same author.
+This model is a neural network based model that can determine whether, when provided
+      with a pair of texts, the second text is an entailment, or a contradiction/neutral with respect to the first text.
 
 
 ## Model Details
@@ -23,21 +23,18 @@ This is a classification model that was trained to
 
 <!-- Provide a longer summary of what this model is. -->
 
-This model is based upon a BERT model that was fine-tuned
-      on 30K pairs of texts.
+The model is a neural network based model trained on 26K premise-hypothesis pairs.
 
-- **Developed by:** Firstname1 Lastname1 and Firstname2 Lastname2
+- **Developed by:** Peter Hamer and Vinayak Singh Bhadoriya
 - **Language(s):** English
 - **Model type:** Supervised
-- **Model architecture:** Transformers
-- **Finetuned from model [optional]:** bert-base-uncased
+- **Model architecture:** Neural Network
 
 ### Model Resources
 
 <!-- Provide links where applicable. -->
 
-- **Repository:** https://huggingface.co/google-bert/bert-base-uncased
-- **Paper or documentation:** https://aclanthology.org/N19-1423.pdf
+- **Paper or documentation:** https://nlp.stanford.edu/pubs/snli_paper.pdf
 
 ## Training Details
 
@@ -45,7 +42,7 @@ This model is based upon a BERT model that was fine-tuned
 
 <!-- This is a short stub of information on the training data that was used, and documentation related to data pre-processing or additional filtering (if applicable). -->
 
-30K pairs of texts drawn from emails, news articles and blog posts.
+26K premise-hypothesis pairs
 
 ### Training Procedure
 
@@ -56,20 +53,19 @@ This model is based upon a BERT model that was fine-tuned
 <!-- This is a summary of the values of hyperparameters used in training the model. -->
 
 
-      - learning_rate: 2e-05
-      - train_batch_size: 16
-      - eval_batch_size: 16
+      - learning_rate: adadelta optimizer does not require a learning rate
+      - train_batch_size: 32
       - seed: 42
-      - num_epochs: 10
+      - num_epochs: 100
 
 #### Speeds, Sizes, Times
 
 <!-- This section provides information about how roughly how long it takes to train the model and the size of the resulting model. -->
 
 
-      - overall training time: 5 hours
-      - duration per training epoch: 30 minutes
-      - model size: 300MB
+      - overall training time: 6m 11.1s
+      - duration per training epoch: 4s 6ms
+      - model size: 3.29MB
 
 ## Evaluation
 
@@ -81,7 +77,7 @@ This model is based upon a BERT model that was fine-tuned
 
 <!-- This should describe any evaluation data used (e.g., the development/validation set provided). -->
 
-A subset of the development set provided, amounting to 2K pairs.
+A development set consisting of 6K pairs was used to evaluate the model.
 
 #### Metrics
 
@@ -95,33 +91,27 @@ A subset of the development set provided, amounting to 2K pairs.
 
 ### Results
 
-The model obtained an F1-score of 67% and an accuracy of 70%.
+The model obtained an accuracy of 64%, and an F1-score of 0.65 for entailments and 0.63 for contradictions/neutral pairs on the development set.
 
 ## Technical Specifications
 
 ### Hardware
 
 
-      - RAM: at least 16 GB
-      - Storage: at least 2GB,
-      - GPU: V100
+      - RAM: at least 2 GB,
+      - Storage: at least 4 GB to account for the word embeddings
 
 ### Software
 
 
-      - Transformers 4.18.0
-      - Pytorch 1.11.0+cu113
-
-## Bias, Risks, and Limitations
-
-<!-- This section is meant to convey both technical and sociotechnical limitations. -->
-
-Any inputs (concatenation of two sequences) longer than
-      512 subwords will be truncated by the model.
+      - Numpy 1.26.4
+      - Pandas 2.2.1
+      - Tensorflow 2.16.1
+      - Matplotlib 3.8.3
 
 ## Additional Information
 
 <!-- Any other information that would be useful for other people to know. -->
 
-The hyperparameters were determined by experimentation
-      with different values.
+The original model that Bowman et al. (2015) proposed used a sum of word embeddings approach to represent the input. In our case, we
+    have opted to go for an approach that uses the average of the word embeddings. Additionally, we have added more layers to the model to improve its performance.
